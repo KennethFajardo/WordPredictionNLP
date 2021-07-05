@@ -1,0 +1,41 @@
+DS Capstone: Word Prediction Data Product
+========================================================
+author: Kenneth Fajardo
+date: 07-05-2021
+autosize: true
+
+Overview
+========================================================
+We present the word prediction application using NLP and the prediction algorithm used, as part of **Coursera's** and **Johns Hopkins University's** Data Science Capstone project. The datasets are provided by **SwiftKey**. 
+
+The goal of this project is to be able to build a Shiny app containing a text field that predicts the next words entered in that text field, and is displayed in interactive buttons.
+
+The **[dataset](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip)** is from a corpus called **HC Corpora**, in which most of it have already been pre-processed.
+
+Quanteda
+========================================================
+The text analyses is powered by **[Quanteda](https://tutorials.quanteda.io/)**, which is specifically used for craeting n-grams as basis for prediction.
+
+Operations:
+* Corpus Creation
+* Tokenization
+* Document-feature matrix
+
+Prediction Algorithm
+========================================================
+Note that the DFMs have already been generated prior to prediction.
+
+1. Read text input. Get the number of words ($w$) in the text field.
+2. Check the value of $w$. While the number of words returned are less than 3<br>
+    1) Let $n = w + 1, w \in [0, 4]$. <br>
+    2) If $w = 0$, display top 1-grams and wait for more input.<br>
+    3) Else if $w > 0$, find the top 3 $n$-grams, that begin with the string according to frequency.<br>
+    4) Display the top 3 $n$-grams and wait for user selection.
+3. If no $n$-grams are found, decrement $w$ and repeat 2.
+4. If there are no possible $n$-grams, return the top 3 1-grams.
+
+Shiny App Design
+========================================================
+The app would just contain a single reactive text field that outputs 3 suggested words, contained in buttons, at a time. Clicking the button would automatically fill up the text field with the contained suggestion.
+
+<img style="box-shadow: none; width: 80%; margin: 0 auto;" src="./EDA-figure/product.PNG">

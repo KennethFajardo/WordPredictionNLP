@@ -1,0 +1,8 @@
+structure(list(file = structure(1:3, .Label = c("blogs", "news", 
+"twitter"), class = "factor"), file_size = structure(1:3, .Label = c("267.8 MB", 
+"269.8 MB", "334.5 MB"), class = "factor"), line_count = structure(c(3L, 
+1L, 2L), .Label = c("1,010,242", "2,360,148", "899,288"), class = "factor"), 
+    char_count = structure(3:1, .Label = c("162,096,241", "203,223,159", 
+    "206,824,505"), class = "factor"), char_mean = structure(c(2L, 
+    1L, 3L), .Label = c("201.1628", "229.987", "68.68054"), class = "factor")), class = "data.frame", row.names = c(NA, 
+-3L))

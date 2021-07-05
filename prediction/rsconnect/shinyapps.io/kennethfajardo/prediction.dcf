@@ -1,0 +1,11 @@
+name: prediction
+title:
+username:
+account: kennethfajardo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4352806
+bundleId: 4787737
+url: https://kennethfajardo.shinyapps.io/prediction/
+when: 1625476344.07918
+lastSyncTime: 1625476344.07918
